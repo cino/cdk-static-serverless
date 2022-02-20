@@ -1,4 +1,4 @@
-name: Static analysis
+name: Deploy
 
 on:
   pull_request:
@@ -22,7 +22,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        aws-region: eu-frankfurt-1
+        aws-region: eu-central-1
 
     - name: Setup Node
       uses: actions/setup-node@v2
